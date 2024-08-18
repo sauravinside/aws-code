@@ -85,7 +85,7 @@ def AddEmp():
                 dynamodb_client.put_item(
                  TableName='employee_image_table',
                     Item={
-                     'empid': {
+                     'emp_id': {
                           'N': emp_id
                       },
                       'image_url': {
@@ -136,7 +136,7 @@ def FetchData():
             response = dynamodb_client.get_item(
                 TableName='employee_image_table',
                 Key={
-                    'empid': {
+                    'emp_id': {
                         'N': str(emp_id)
                     }
                 }
